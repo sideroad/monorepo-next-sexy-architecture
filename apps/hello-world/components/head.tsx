@@ -12,9 +12,9 @@ interface Props {
   ogImage: string;
 }
 
-const Head: FC = (props: Props) => (
+const Head: FC<Props> = (props: Props) => (
   <NextHead>
-    <meta charset="UTF-8" />
+    <meta charSet="UTF-8" />
     <title>{props.title || ''}</title>
     <meta
       name="description"
