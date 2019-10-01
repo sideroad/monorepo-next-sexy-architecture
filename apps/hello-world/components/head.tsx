@@ -6,10 +6,10 @@ const defaultOGURL = '';
 const defaultOGImage = '';
 
 interface Props {
-  title: string;
-  description: string;
-  url: string;
-  ogImage: string;
+  title?: string;
+  description?: string;
+  url?: string;
+  ogImage?: string;
 }
 
 const Head: FC<Props> = (props: Props) => (

@@ -1,5 +1,6 @@
 {
   "name": "hello-world",
+  "version": "1.0.0",
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -8,6 +9,8 @@
   "dependencies": {
     "next": "^9.0.7",
     "react": "^16.10.1",
-    "react-dom": "^16.10.1"
+    "react-dom": "^16.10.1",
+    "redux-unfetch": "^1.0.12",
+    "with-redux-store": "^1.0.12"
   }
 }
