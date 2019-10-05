@@ -16,13 +16,17 @@
     "noEmit": true,
     "jsx": "preserve",
     "baseUrl": "src",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "paths": {
+      "~/components/*": ["components/*"],
+      "~/reducers/*": ["reducers/*"]
+    }
   },
   "include": [
     "apps/**/*"
   ],
   "typeRoots":[
     "node_modules/@types",
-    "./types"
+    "types"
   ]
 }

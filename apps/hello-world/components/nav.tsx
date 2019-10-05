@@ -1,22 +1,20 @@
 import React, { FC } from 'react';
 import Link from 'next/link';
 
-const links = [
-  { href: 'https://github.com/segmentio/create-next-app', label: 'Github' }
-];
+const links = [{ href: '/users/octocat', label: 'Octocat' }];
 
 const Nav: FC = () => (
   <nav>
     <ul>
       <li>
-        <Link prefetch href="/">
+        <Link href="/">
           <a>Home</a>
         </Link>
       </li>
       <ul>
         {links.map(({ href, label }) => (
           <li key={`nav-link-${href}-${label}`}>
-            <Link href={href}>
+            <Link href="/users/[id]" as={href}>
               <a>{label}</a>
             </Link>
           </li>
@@ -25,11 +23,6 @@ const Nav: FC = () => (
     </ul>
 
     <style jsx>{`
-      :global(body) {
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir,
-          Helvetica, sans-serif;
-      }
       nav {
         text-align: center;
       }

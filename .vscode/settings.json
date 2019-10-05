@@ -8,5 +8,6 @@
       {"language": "typescriptreact", "autoFix": true }
   ],
   "window.zoomLevel": 1,
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "workbench.tree.indent": 18
 }

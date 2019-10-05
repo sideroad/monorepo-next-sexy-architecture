@@ -6,11 +6,22 @@
     "build": "next build",
     "start": "next start"
   },
+  "meta": {
+    "name": "",
+    "descripton": ""
+  },
   "dependencies": {
+    "@sideroad/react-i18n": "^1.0.30",
+    "@sideroad/redux-fetch": "^1.0.31",
+    "@sideroad/with-redux-store": "^1.0.30",
     "next": "^9.0.7",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
-    "redux-unfetch": "^1.0.12",
-    "with-redux-store": "^1.0.12"
+    "react-redux": "^7.1.1",
+    "redux": "^4.0.4",
+    "redux-devtools-extension": "^2.13.8"
+  },
+  "_moduleAliases": {
+    "~/components/": "components"
   }
 }
