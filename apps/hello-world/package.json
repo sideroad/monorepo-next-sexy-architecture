@@ -6,10 +6,6 @@
     "build": "next build",
     "start": "next start"
   },
-  "meta": {
-    "name": "",
-    "descripton": ""
-  },
   "dependencies": {
     "@sideroad/react-i18n": "^1.0.30",
     "@sideroad/redux-fetch": "^1.0.31",
