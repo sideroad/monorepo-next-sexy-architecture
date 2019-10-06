@@ -6,10 +6,10 @@ import Head from '../../components/head';
 import Nav from '../../components/nav';
 
 interface Props {
-  user?: {
-    login?: string;
-    avatar_url?: string;
-    html_url?: string;
+  user: {
+    login: string;
+    avatar_url: string;
+    html_url: string;
   };
 }
 
