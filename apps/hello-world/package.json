@@ -2,9 +2,13 @@
   "name": "hello-world",
   "version": "1.0.0",
   "scripts": {
-    "dev": "next",
+    "dev": "npm-watch",
+    "_dev": "next",
     "build": "next build",
     "start": "next start"
+  },
+  "watch": {
+    "_dev": "locales/*.json"
   },
   "dependencies": {
     "@sideroad/react-i18n": "^1.0.30",

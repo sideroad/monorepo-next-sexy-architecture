@@ -35,15 +35,16 @@
     "@typescript-eslint/eslint-plugin": "^2.3.1",
     "@typescript-eslint/parser": "^2.3.1",
     "babel-jest": "^24.9.0",
+    "babel-plugin-module-resolver": "^3.2.0",
     "eslint": "^6.4.0",
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.15.0",
     "jest": "^24.9.0",
     "lerna": "^3.16.4",
+    "npm-watch": "^0.6.0",
     "prettier": "^1.18.2",
     "ts-jest": "^24.1.0",
-    "typescript": "3.6.3",
-    "babel-plugin-module-resolver": "^3.2.0"
+    "typescript": "3.6.3"
   }
 }
