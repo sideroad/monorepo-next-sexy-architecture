@@ -38,7 +38,7 @@ const Nav: FC = () => (
         padding: 6px 8px;
       }
       a {
-        color: #067df7;
+        color: #333;
         text-decoration: none;
         font-size: 13px;
       }

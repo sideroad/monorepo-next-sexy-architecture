@@ -8,7 +8,7 @@ interface Props {
 const User: FC<Props> = (props: Props) => {
   return (
     <>
-      {props.props.avatar_url ? (
+      {props.avatar_url ? (
         <div
           className="avator"
           style={{ backgroundImage: `url(${props.avatar_url})` }}
@@ -28,10 +28,12 @@ const User: FC<Props> = (props: Props) => {
             align-items: center;
           }
           a {
-            font-size: 1.25em;
             height: 2em;
             text-align: center;
             outline: none;
+            color: #333;
+            text-decoration: none;
+            font-size: 1.2em;
           }
           .avator {
             border: none;
@@ -39,8 +41,8 @@ const User: FC<Props> = (props: Props) => {
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            width: 150px;
-            height: 150px;
+            width: 100px;
+            height: 100px;
             margin: auto;
           }
         `}
