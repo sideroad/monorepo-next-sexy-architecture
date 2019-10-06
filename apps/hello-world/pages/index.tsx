@@ -1,9 +1,9 @@
 import React from 'react';
-import Head from '../components/head';
-import Nav from '../components/nav';
-import Search from '../components/search';
+import Head from 'components/head';
+import Nav from 'components/nav';
+import Search from 'components/search';
 import Router from 'next/router';
-import { NP } from '../../../types/next';
+import { NP } from 'types/next';
 
 const Index: NP = () => (
   <div>

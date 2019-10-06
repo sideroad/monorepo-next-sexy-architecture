@@ -2,7 +2,7 @@ import React from 'react';
 import hash from 'object-hash';
 import Link from 'next/link';
 import { NextPage } from 'next';
-import nextBook from '../components/nextbook';
+import nextBook from 'components/nextbook';
 
 const books = nextBook.books.map(book => ({
   ...book,

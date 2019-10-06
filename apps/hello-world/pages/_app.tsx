@@ -5,11 +5,11 @@ import App from 'next/app';
 import withReduxStore from '@sideroad/with-redux-store';
 import Fetcher from '@sideroad/redux-fetch';
 import { init, Provider as I18nProvider, Headers } from '@sideroad/react-i18n';
-import initializeStore from '../reducers/index';
+import initializeStore from 'reducers/index';
 import { Provider as ContextProvider } from '../helpers/context';
 import urls from '../urls';
 import locales from '../locales';
-import { Store } from '../../../types/redux';
+import { Store } from 'types/redux';
 import config from '../config';
 
 interface Props {
