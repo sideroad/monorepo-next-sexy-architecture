@@ -47,6 +47,7 @@ export default class MyDocument extends Document<Props> {
           <I18nRenderJS headers={headers} locales={locales} />
           <Main />
           <NextScript />
+          <script src="/static/sw-register.js"></script>
         </body>
       </html>
     );
