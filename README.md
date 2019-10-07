@@ -28,4 +28,6 @@ yarn test
 cd apps/hello-world
 yarn gen-component hogehoge # Generate component
 yarn gen-page hogehoge # Generate page
+yarn gen-reducer hogehoge # Generate reducer with fetcher setting
+yarn gen-pure-reducer hogehoge # Generate pure reducer
 ```

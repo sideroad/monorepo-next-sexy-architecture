@@ -1,12 +1,15 @@
+---
+to: reducers/<%= name %>.ts
+---
 import { Action } from 'types/redux';
 
-const RESET = 'user/RESET';
-const GET_START = 'user/GET_START';
-const GET_SUCCESS = 'user/GET_SUCCESS';
-const GET_FAIL = 'user/GET_FAIL';
-const GETS_START = 'user/GETS_START';
-const GETS_SUCCESS = 'user/GETS_SUCCESS';
-const GETS_FAIL = 'user/GETS_FAIL';
+const RESET = '<%= name %>/RESET';
+const GET_START = '<%= name %>/GET_START';
+const GET_SUCCESS = '<%= name %>/GET_SUCCESS';
+const GET_FAIL = '<%= name %>/GET_FAIL';
+const GETS_START = '<%= name %>/GETS_START';
+const GETS_SUCCESS = '<%= name %>/GETS_SUCCESS';
+const GETS_FAIL = '<%= name %>/GETS_FAIL';
 
 const initialState = {
   item: {},

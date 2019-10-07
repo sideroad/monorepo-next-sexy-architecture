@@ -1,9 +1,10 @@
 import { Urls } from '@sideroad/redux-fetch';
+import config from './config';
 
 const urls: Urls = {
   user: {
     get: {
-      url: 'https://api.github.com/users/[id]',
+      url: `https://${config.api.host}/users/[id]`,
       method: 'GET'
     }
   }
