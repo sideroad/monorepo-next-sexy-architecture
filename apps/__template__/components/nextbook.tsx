@@ -4,7 +4,7 @@ import Search from './search';
 import User from './user';
 
 const nextBook = {
-  title: 'hello-world',
+  title: '__template__',
   books: [
     {
       name: 'Search',

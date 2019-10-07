@@ -1,5 +1,6 @@
 import React, { FC, useState, useContext } from 'react';
 import I18n, { Context } from '@sideroad/react-i18n';
+import Button from './button';
 
 interface Props {
   onSubmit: (id: string) => void;
@@ -34,9 +35,9 @@ const Search: FC<Props> = (props: Props) => {
         <input value={text} onChange={e => setText(e.target.value)} />
       </p>
       <p>
-        <button onClick={() => props.onSubmit(text)}>
+        <Button onClick={() => props.onSubmit(text)}>
           <I18n id="submit" />
-        </button>
+        </Button>
       </p>
       <style jsx>
         {`

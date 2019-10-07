@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search to render submit form 1`] = `
+<form
+  className="jsx-1487842596"
+  onSubmit={[Function]}
+>
+  <div
+    className="jsx-1487842596 title"
+  >
+    <h1
+      className="jsx-1487842596"
+    >
+      hello
+    </h1>
+    <h2
+      className="jsx-1487842596"
+    >
+      search-description
+    </h2>
+  </div>
+  <p
+    className="jsx-1487842596"
+  >
+    <input
+      className="jsx-1487842596"
+      onChange={[Function]}
+      value="octocat"
+    />
+  </p>
+  <p
+    className="jsx-1487842596"
+  >
+    <button
+      className="jsx-3752195309"
+      onClick={[Function]}
+    >
+      submit
+    </button>
+  </p>
+</form>
+`;

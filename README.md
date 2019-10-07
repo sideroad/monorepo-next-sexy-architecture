@@ -1,17 +1,31 @@
+## Highly recommend
+This monorepo is optimize for developer who use vscode
+
 ## install
 ```
 yarn
 ```
 
+## create new app
+```
+yarn create-app -n hello-world
+```
+
 ## start up dev server
 ```
-yarn workspace hello-world dev
-# or
 cd apps/hello-world
 yarn dev
 ```
 
-## blueprint
+## test
 ```
-yarn hygen app new new_app_name_which_you_want
+cd apps/hello-world
+yarn test
+```
+
+## generate code from blueprint
+```
+cd apps/hello-world
+yarn gen-component hogehoge # Generate component
+yarn gen-page hogehoge # Generate page
 ```

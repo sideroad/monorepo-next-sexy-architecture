@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav to render navigation 1`] = `
+<nav
+  className="jsx-144481089"
+>
+  <ul
+    className="jsx-144481089"
+  >
+    <li
+      className="jsx-144481089"
+    >
+      <a
+        className="jsx-144481089"
+        href="/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Home
+      </a>
+    </li>
+    <ul
+      className="jsx-144481089"
+    >
+      <li
+        className="jsx-144481089"
+      >
+        <a
+          className="jsx-144481089"
+          href="/users/octocat"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          Octocat
+        </a>
+      </li>
+    </ul>
+  </ul>
+</nav>
+`;

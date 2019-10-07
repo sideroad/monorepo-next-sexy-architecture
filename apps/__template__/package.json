@@ -1,17 +1,18 @@
----
-to: apps/<%= name %>/package.json
----
 {
-  "name": "<%=name%>",
+  "name": "template",
   "version": "1.0.0",
   "scripts": {
     "dev": "npm-watch",
-    "_dev": "next",
+    "next-dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "gen-component": "hygen component new",
+    "gen-reducer": "hygen reducer new",
+    "gen-page": "hygen page new",
+    "test": "jest"
   },
   "watch": {
-    "_dev": "locales/*.json"
+    "next-dev": "locales/*.json"
   },
   "dependencies": {
     "@sideroad/react-i18n": "^1.0.30",

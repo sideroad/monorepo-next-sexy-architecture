@@ -1,6 +1,6 @@
 {
-  "name": "hello-world",
-  "short_name": "hello-world",
+  "name": "__template__",
+  "short_name": "__template__",
   "theme_color": "#333333",
   "background_color": "#ffffff",
   "display": "standalone",
