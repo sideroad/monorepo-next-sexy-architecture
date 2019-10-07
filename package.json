@@ -7,7 +7,10 @@
     ]
   },
   "scripts": {
+    "lint": "eslint apps/**/*.{js,ts,tsx}",
+    "hygen": "hygen",
     "test": "jest",
+    "lint-staged": "lint-staged",
     "postinstall": "vscode-extension-install"
   },
   "jest": {
@@ -16,7 +19,14 @@
       "dist"
     ]
   },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
   "pre-commit": [
+    "lint-staged",
     "test"
   ],
   "devDependencies": {
@@ -40,8 +50,10 @@
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.15.0",
+    "hygen": "^4.0.9",
     "jest": "^24.9.0",
     "lerna": "^3.16.4",
+    "lint-staged": "^9.4.1",
     "npm-watch": "^0.6.0",
     "prettier": "^1.18.2",
     "ts-jest": "^24.1.0",
