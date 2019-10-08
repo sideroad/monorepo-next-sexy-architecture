@@ -1,8 +1,8 @@
 import acceptLanguage from 'accept-language';
-import { assignableLanguage, fallback } from '../locales';
+import { supportedLanguage, assignableLanguage, fallback } from '../locales';
 
 export default ({ req, res, query }) => {
-  if (!req || query.lang) {
+  if (!req || supportedLanguage.find(lang => lang === query.lang)) {
     return;
   } else {
     acceptLanguage.languages(assignableLanguage);
