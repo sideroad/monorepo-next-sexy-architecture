@@ -1,5 +1,5 @@
 # Prerequisition
-This monorepo is optimize for developer who use vscode.
+This monorepo is progressive DevX for developer who use vscode.
 
 # Features
 - Manage apps in monorepo
