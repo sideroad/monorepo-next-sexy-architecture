@@ -16,9 +16,10 @@
     "next-dev": "locales/*.json"
   },
   "dependencies": {
-    "@sideroad/react-i18n": "^1.0.30",
-    "@sideroad/redux-fetch": "^1.0.31",
-    "@sideroad/with-redux-store": "^1.0.30",
+    "@sideroad/react-i18n": "^2.0.2",
+    "@sideroad/redux-fetch": "^2.0.0",
+    "@sideroad/with-redux-store": "^2.0.0",
+    "accept-language": "^3.0.18",
     "next": "^9.0.7",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",

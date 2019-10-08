@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import I18n from '@sideroad/react-i18n';
 const theme = {
   color: {
     background: '#ffffff',
@@ -23,7 +24,7 @@ const Offline: FC = () => (
           <img alt="floras" className="img" src="/static/images/favicon.png" />
         </div>
         <div className="message" style={{ color: theme.color.message }}>
-          Network Connection Failed
+          <I18n id="network-connection-failed" />
         </div>
         <div className="button">
           <a
@@ -34,13 +35,13 @@ const Offline: FC = () => (
             className="reload"
             href=""
           >
-            Reload
+            <I18n id="reload" />
           </a>
           <div
             style={{ color: theme.color.message }}
             className="pull-to-refresh"
           >
-            Pull down to refresh
+            <I18n id="pulldown-to-refresh" />
           </div>
         </div>
       </div>
@@ -62,7 +63,7 @@ const Offline: FC = () => (
         }
 
         .container {
-          width: 300px;
+          width: 375px;
           display: flex;
           flex-direction: column;
           justify-content: center;

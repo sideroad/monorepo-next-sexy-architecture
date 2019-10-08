@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link to render 1`] = `
+<a
+  href="/en"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+>
+  Hello World
+</a>
+`;
+
+exports[`Link to render with as 1`] = `
+<a
+  href="/en/users/sideroad"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+>
+  Hello World
+</a>
+`;

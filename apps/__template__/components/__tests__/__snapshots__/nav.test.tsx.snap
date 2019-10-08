@@ -12,7 +12,7 @@ exports[`Nav to render navigation 1`] = `
     >
       <a
         className="jsx-144481089"
-        href="/"
+        href="/en"
         onClick={[Function]}
         onMouseEnter={[Function]}
       >
@@ -27,7 +27,7 @@ exports[`Nav to render navigation 1`] = `
       >
         <a
           className="jsx-144481089"
-          href="/users/octocat"
+          href="/en/users/octocat"
           onClick={[Function]}
           onMouseEnter={[Function]}
         >

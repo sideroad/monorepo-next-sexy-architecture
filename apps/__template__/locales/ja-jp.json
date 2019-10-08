@@ -1,0 +1,8 @@
+{
+  "hello": "こんにちは",
+  "search-description": "GitHub IDを入力して検索してください",
+  "submit": "検索",
+  "network-connection-failed": "ネットワーク接続に失敗しました",
+  "reload": "再読み込み",
+  "pulldown-to-refresh": "↓にドラッグして再読み込み"
+}

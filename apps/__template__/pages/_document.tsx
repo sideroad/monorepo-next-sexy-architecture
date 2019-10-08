@@ -3,21 +3,27 @@ import Document, { Head, Main, NextScript } from 'next/document';
 import { init, I18nRenderJS, Headers } from '@sideroad/react-i18n';
 import locales from '../locales';
 import config from '../config';
+import assignUrl from 'helpers/assignUrl';
 
 interface Props {
   headers: Headers;
+  lang: string | undefined;
 }
 
 export default class MyDocument extends Document<Props> {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps, headers: ctx.req.headers };
+    assignUrl({
+      req: ctx.req,
+      res: ctx.res,
+      query: ctx.query
+    });
+    return { ...initialProps, headers: ctx.req.headers, lang: ctx.query.lang };
   }
 
   render() {
-    const { headers } = this.props;
-
-    const i18n = init({ headers, locales });
+    const { headers, lang } = this.props;
+    const i18n = init({ headers, locales, assignedLanguage: lang });
 
     return (
       <html lang={i18n.lang}>
@@ -44,7 +50,11 @@ export default class MyDocument extends Document<Props> {
           <link rel="apple-touch-icon" href={`/static/images/favicon.png`} />
         </Head>
         <body>
-          <I18nRenderJS headers={headers} locales={locales} />
+          <I18nRenderJS
+            headers={headers}
+            locales={locales}
+            assignedLanguage={lang}
+          />
           <Main />
           <NextScript />
           <script src="/static/sw-register.js"></script>

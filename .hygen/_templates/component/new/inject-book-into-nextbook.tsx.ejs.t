@@ -1,5 +1,5 @@
 ---
-to: components/nextbook.tsx
+to: components/_nextbook.tsx
 inject: true
 skip_if: "name: '<%= Name %>',"
 after: \s*books:\s*\[

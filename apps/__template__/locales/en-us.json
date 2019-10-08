@@ -1,0 +1,8 @@
+{
+  "hello": "Hello",
+  "search-description": "Input GitHub ID then search",
+  "submit": "Submit",
+  "network-connection-failed": "Network Connection Failed",
+  "reload": "Reload",
+  "pulldown-to-refresh": "Pull down to refresh"
+}

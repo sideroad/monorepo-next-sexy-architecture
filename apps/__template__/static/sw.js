@@ -12,7 +12,7 @@ self.addEventListener('install', event => {
       .open('static')
       .then(cache =>
         cache.addAll([
-          '/_offline',
+          '/en/_offline',
           '/static/images/favicon.png',
           '/static/pulltorefresh.min.js',
           '/static/pulltorefresh-init.js'

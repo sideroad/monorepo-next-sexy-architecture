@@ -8,13 +8,14 @@ import { init, Provider as I18nProvider, Headers } from '@sideroad/react-i18n';
 import initializeStore from 'reducers/index';
 import { Provider as ContextProvider } from '../helpers/context';
 import urls from '../urls';
-import locales from '../locales';
+import locales, { fallbackLanguage } from '../locales';
 import { Store } from 'types/redux';
 import config from '../config';
 
 interface Props {
   headers: Headers;
   store: Store;
+  lang: string | undefined;
 }
 
 class MyApp extends App<Props> {
@@ -37,13 +38,20 @@ class MyApp extends App<Props> {
     }
     return {
       pageProps,
-      headers: ctx.req ? ctx.req.headers : undefined
+      headers: ctx.req ? ctx.req.headers : undefined,
+      lang: ctx.query.lang
     };
   }
 
   render() {
-    const { Component, pageProps, store, headers } = this.props;
-    const i18n = init({ headers, locales });
+    const { Component, pageProps, store, headers, lang } = this.props;
+
+    const i18n = init({
+      headers,
+      locales,
+      fallbackLanguage,
+      assignedLanguage: lang
+    });
 
     const fetcher = new Fetcher({
       dispatch: store.dispatch,

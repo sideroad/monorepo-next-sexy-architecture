@@ -28,7 +28,7 @@
     "@babel/preset-env": "^7.6.2",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.6.0",
-    "@sideroad/vscode-extension-install": "^1.0.28",
+    "@sideroad/vscode-extension-install": "^2.0.0",
     "@types/jest": "^24.0.18",
     "@types/next": "^8.0.6",
     "@types/node": "12.7.11",
