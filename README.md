@@ -1,5 +1,17 @@
-## Highly recommend
-This monorepo is optimize for developer who use vscode
+# Prerequisition
+This monorepo is optimize for developer who use vscode.
+
+# Features
+- Manage apps in monorepo
+- Easy to create new app
+- Customizable blueprints
+- Jest in default
+- i18n with URL assignment
+- Components book page ( nextbook )
+- PWA in default
+- Enforce to install vscode extensions
+- Precommit hook to execute lint, test
+- Declarable fetch and simplified redux
 
 ## install
 ```
