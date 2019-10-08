@@ -2,7 +2,7 @@
 This monorepo is progressive DevX for developer who use vscode.
 
 # Features
-- Manage apps in monorepo
+- Manage next.js apps in monorepo
 - Easy to create new app
 - Customizable blueprints
 - Jest in default
@@ -27,6 +27,9 @@ yarn create-app -n hello-world
 ```
 cd apps/hello-world
 yarn dev
+
+open http://localhost:3000 # open app
+open http://localhost:3000/_nextbook # open component book
 ```
 
 ## test
