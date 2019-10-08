@@ -9,7 +9,6 @@ export default ({ req, res, query }) => {
     const assignedLanguage = fallback(
       acceptLanguage.get(req.headers['accept-language'])
     );
-    console.log(req.url, assignedLanguage);
     res.setHeader('Location', `/${assignedLanguage}${req.url}`);
     res.statusCode = 302;
     res.end();
