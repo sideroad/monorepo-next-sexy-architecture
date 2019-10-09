@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import hash from 'object-hash';
 import Link from 'components/link';
 import { NextPage } from 'next';
 import nextBook from 'components/_nextbook';
+
+export interface NextBook {
+  title: string;
+  books: Array<{
+    name: string;
+    desc: string;
+    component?: ReactElement;
+    components?: Array<{
+      name: string;
+      component: ReactElement;
+    }>;
+  }>;
+}
 
 const books = nextBook.books.map(book => ({
   ...book,
@@ -16,6 +29,9 @@ interface Props {
 }
 const NextBook: NextPage<Props> = (props: Props) => {
   const currentBook = books.find(book => book.id === props.query.id);
+  const components = currentBook
+    ? currentBook.components || [{ name: '', component: currentBook.component }]
+    : [];
   return (
     <div>
       <h1 className="title">{nextBook.title}</h1>
@@ -40,20 +56,31 @@ const NextBook: NextPage<Props> = (props: Props) => {
                 <div className="desc">{currentBook.desc}</div>
               ) : null}
               <div className="divider" />
-              <div>{currentBook.component}</div>
-              <div className="divider" />
-              <h2 className="props">Sample props</h2>
-              <ul>
-                {Object.keys(currentBook.component.props).map(prop => {
-                  const value = currentBook.component.props[prop];
-                  return (
-                    <li className="prop" key={prop}>
-                      <strong>{prop}</strong>:{' '}
-                      {value.toString ? value.toString() : value}
-                    </li>
-                  );
-                })}
-              </ul>
+              {components.map(({ name = '', component }) => (
+                <>
+                  {name ? (
+                    <>
+                      <h2 className="subname">{name}</h2>
+                      <div className="subdivider" />
+                    </>
+                  ) : null}
+                  <div>{component}</div>
+                  <div className="subdivider" />
+                  <h3 className="props">Sample props</h3>
+                  <ul>
+                    {Object.keys(component.props).map(prop => {
+                      const value = component.props[prop];
+                      return (
+                        <li className="prop" key={prop}>
+                          <strong>{prop}</strong>:{' '}
+                          {value.toString ? value.toString() : value}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                  <div className="divider" />
+                </>
+              ))}
             </>
           ) : null}
         </div>
@@ -107,6 +134,10 @@ const NextBook: NextPage<Props> = (props: Props) => {
             font-weight: normal;
             margin: 0;
           }
+          .subname {
+            font-weight: normal;
+            margin: 0;
+          }
           .desc {
             padding: 20px 0;
           }
@@ -114,12 +145,16 @@ const NextBook: NextPage<Props> = (props: Props) => {
             margin: 60px 0;
             border: 0.5px solid #bbb;
           }
+          .subdivider {
+            margin: 60px 0;
+            border: 0;
+          }
           .prop {
             padding: 0.5em;
           }
 
           .props {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: normal;
             margin: 0;
           }
