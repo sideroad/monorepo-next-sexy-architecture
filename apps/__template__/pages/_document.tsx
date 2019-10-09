@@ -3,7 +3,7 @@ import Document, { Head, Main, NextScript } from 'next/document';
 import { init, I18nRenderJS, Headers } from '@sideroad/react-i18n';
 import locales from '../locales';
 import config from '../config';
-import assignUrl from 'helpers/assignUrl';
+import { assignUrl } from '../locales';
 
 interface Props {
   headers: Headers;

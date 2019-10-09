@@ -28,7 +28,8 @@ interface Props {
   };
 }
 const NextBook: NextPage<Props> = (props: Props) => {
-  const currentBook = books.find(book => book.id === props.query.id);
+  const currentBook =
+    books.find(book => book.id === props.query.id) || books[0];
   const components = currentBook
     ? currentBook.components || [{ name: '', component: currentBook.component }]
     : [];
