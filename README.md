@@ -46,3 +46,4 @@ yarn gen-page hogehoge # Generate page
 yarn gen-reducer hogehoge # Generate reducer with fetcher setting
 yarn gen-pure-reducer hogehoge # Generate pure reducer
 ```
+
