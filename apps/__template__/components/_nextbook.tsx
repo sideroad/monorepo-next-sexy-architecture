@@ -33,7 +33,7 @@ const nextBook: NextBook = {
           name: 'Basic usage',
           component: (
             <Link key="top" href="/">
-              Home
+              <a>Home</a>
             </Link>
           )
         },
@@ -41,7 +41,7 @@ const nextBook: NextBook = {
           name: 'With as property',
           component: (
             <Link key="user" href="/users/[id]" as="/users/sideroad">
-              sideroad
+              <a>sideroad</a>
             </Link>
           )
         }

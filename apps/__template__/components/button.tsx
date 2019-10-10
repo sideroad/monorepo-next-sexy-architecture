@@ -1,4 +1,5 @@
 import React, { FC, ReactNode } from 'react';
+import { BUTTON } from '../cid';
 
 interface Props {
   onClick: () => void;
@@ -7,7 +8,9 @@ interface Props {
 const Button: FC<Props> = (props: Props) => {
   return (
     <>
-      <button onClick={() => props.onClick()}>{props.children}</button>
+      <button data-cid={BUTTON} onClick={() => props.onClick()}>
+        {props.children}
+      </button>
       <style jsx>
         {`
           button {

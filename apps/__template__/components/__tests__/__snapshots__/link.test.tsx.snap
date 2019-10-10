@@ -2,6 +2,7 @@
 
 exports[`Link to render 1`] = `
 <a
+  data-cid="SWTD9_x0"
   href="/en"
   onClick={[Function]}
   onMouseEnter={[Function]}
@@ -12,6 +13,7 @@ exports[`Link to render 1`] = `
 
 exports[`Link to render with as 1`] = `
 <a
+  data-cid="SWTD9_x0"
   href="/en/users/sideroad"
   onClick={[Function]}
   onMouseEnter={[Function]}

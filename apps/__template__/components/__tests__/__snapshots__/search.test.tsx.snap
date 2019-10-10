@@ -3,6 +3,7 @@
 exports[`Search to render submit form 1`] = `
 <form
   className="jsx-1487842596"
+  data-cid="SZHwArsG"
   onSubmit={[Function]}
 >
   <div
@@ -33,6 +34,7 @@ exports[`Search to render submit form 1`] = `
   >
     <button
       className="jsx-3752195309"
+      data-cid="eWRhpRV"
       onClick={[Function]}
     >
       submit

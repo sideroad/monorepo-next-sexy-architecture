@@ -1,10 +1,11 @@
 import React, { FC } from 'react';
 import Link from 'components/link';
+import { NAV } from '../cid';
 
 const links = [{ href: '/users/octocat', label: 'Octocat' }];
 
 const Nav: FC = () => (
-  <nav>
+  <nav data-cid={NAV}>
     <ul>
       <li>
         <Link href="/">

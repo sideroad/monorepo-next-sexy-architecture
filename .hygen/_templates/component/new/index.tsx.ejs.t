@@ -3,14 +3,15 @@ to: components/<%= name %>.tsx
 ---
 import React, { FC } from 'react';
 import I18n from '@sideroad/react-i18n';
+import { <%= h.inflection.underscore(name).toUpperCase() %> } from './_loc';
 
 interface Props {
   onClick: () => void;
 }
-const <%= Name %>: FC<Props> = (props: Props) => {
+const <%= h.inflection.camelize(name) %>: FC<Props> = (props: Props) => {
   return (
     <>
-      <button onClick={() => props.onClick()}>
+      <button data-cid={<%= h.inflection.underscore(name).toUpperCase() %>} onClick={() => props.onClick()}>
         <I18n id="hello" />
       </button>
       <style jsx>
@@ -31,4 +32,4 @@ const <%= Name %>: FC<Props> = (props: Props) => {
   );
 };
 
-export default <%= Name %>;
+export default <%= h.inflection.camelize(name) %>;

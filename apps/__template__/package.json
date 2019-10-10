@@ -10,7 +10,12 @@
     "gen-reducer": "hygen reducer new",
     "gen-pure-reducer": "hygen pure-reducer new",
     "gen-page": "hygen page new",
-    "test": "jest"
+    "test": "jest",
+    "cypress:open": "cypress open",
+    "ci": "cypress run"
+  },
+  "jest": {
+    "testPathIgnorePatterns": ["node_modules", "cypress"]
   },
   "watch": {
     "next-dev": "locales/*.json"

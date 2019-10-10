@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { USER } from '../cid';
 
 interface Props {
   login: string;
@@ -8,13 +9,15 @@ interface Props {
 const User: FC<Props> = (props: Props) => {
   return (
     <>
-      <div
-        className="avator"
-        style={{ backgroundImage: `url(${props.avatar_url})` }}
-      />
-      <p>
-        <a href={props.html_url}>{props.login}</a>
-      </p>
+      <div data-cid={USER}>
+        <div
+          className="avator"
+          style={{ backgroundImage: `url(${props.avatar_url})` }}
+        />
+        <p>
+          <a href={props.html_url}>{props.login}</a>
+        </p>
+      </div>
       <style jsx>
         {`
           p,
@@ -22,6 +25,7 @@ const User: FC<Props> = (props: Props) => {
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
           }
           a {
             height: 2em;

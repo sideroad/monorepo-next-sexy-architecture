@@ -42,7 +42,10 @@ export const assignUrl = ({ req, res, query }) => {
     const assignedLanguage = fallback(
       acceptLanguage.get(req.headers['accept-language'])
     );
-    res.setHeader('Location', `/${assignedLanguage}${req.url}`);
+    res.setHeader(
+      'Location',
+      `/${assignedLanguage}${req.url === '/' ? '' : req.url}`
+    );
     res.statusCode = 302;
     res.end();
   }

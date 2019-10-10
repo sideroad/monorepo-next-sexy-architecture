@@ -1,7 +1,7 @@
 ---
 to: components/_nextbook.tsx
 inject: true
-skip_if: "import <%= Name %> from './<%= name %>';"
+skip_if: "import <%= h.inflection.camelize(name) %> from './<%= name %>';"
 after: "import React from 'react';"
 ---
-import <%= Name %> from './<%= name %>';
+import <%= h.inflection.camelize(name) %> from './<%= name %>';
