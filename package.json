@@ -66,5 +66,6 @@
     "shortid": "^2.2.15",
     "ts-jest": "^24.1.0",
     "typescript": "3.6.3"
-  }
+  },
+  "sideEffects": false
 }
