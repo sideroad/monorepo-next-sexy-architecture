@@ -1921,10 +1921,10 @@
     qs "^6.9.0"
     snake-case "^2.1.0"
 
-"@sideroad/vscode-extension-install@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@sideroad/vscode-extension-install/-/vscode-extension-install-2.0.0.tgz#ebb743dc1205c8e77b21b20f243d73b307463103"
-  integrity sha512-h7LQSTeIrDDQIkIz9uGuFg9jOuWrSZ/uXMz0ofInk4Zipq4u3OrQToDldUQwNilCTqcQ7weX34Ime6tmPA7lGg==
+"@sideroad/vscode-extension-install@^2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@sideroad/vscode-extension-install/-/vscode-extension-install-2.0.3.tgz#7173e27bd7b05b3bb75aee19e05084a368c4b99c"
+  integrity sha512-xkFL9yrzcQIccd5BP74z/AZ4D7J4f232s/+MMAd9ArsOfajsPkh50oJUzidM512lIRrMdA/D+JM59/YrW1QzGw==
   dependencies:
     which "^1.3.1"
 
