@@ -47,3 +47,49 @@ yarn gen-reducer hogehoge # Generate reducer with fetcher setting
 yarn gen-pure-reducer hogehoge # Generate pure reducer
 ```
 
+## Environment variable strategy
+For browser environments variables, it would be better to be same values across environments.
+For server environment variables, it would be better to separated in each environments.
+
+### For both of browser and server variables
+put values under config.js directly
+```
+# config.js
+export default {
+  ...
+  meta: {
+    title: 'hello-world'
+  },
+  ...
+};
+```
+
+### For only server side variables
+put variables under config.js throughout process.env
+
+In case of non-secure value, Recommended to configure under `.env` file. and prepare CI/CD process for each environment to copy from .${env}.env to .env. put access logic under `config.js` to get variables throughout `process.env`
+```
+# .env
+API_HOST=api.github.com
+
+# config.js
+export default {
+  ...
+  api: {
+    host: process.env.API_HOST
+  },
+  ...
+};
+```
+
+In case of secure value, DON'T put variables under `.env` file. Each server better to configure. put access logic under `config.js` to get variables throughout `process.env`
+```
+# config.js
+export default {
+  ...
+  api: {
+    host: process.env.SECRET_KEY
+  },
+  ...
+};
+```

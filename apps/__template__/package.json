@@ -15,7 +15,11 @@
     "ci": "cypress run"
   },
   "jest": {
-    "testPathIgnorePatterns": ["node_modules", "cypress"]
+    "testPathIgnorePatterns": [
+      "node_modules",
+      "cypress"
+    ],
+    "setupFiles": ["<rootDir>/jest.setup.js"]
   },
   "watch": {
     "next-dev": "locales/*.json"
@@ -25,6 +29,7 @@
     "@sideroad/redux-fetch": "^2.0.0",
     "@sideroad/with-redux-store": "^2.0.0",
     "accept-language": "^3.0.18",
+    "dotenv": "^8.1.0",
     "next": "^9.0.7",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
