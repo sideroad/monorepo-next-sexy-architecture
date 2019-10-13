@@ -3,7 +3,7 @@ to: components/<%= name %>.tsx
 ---
 import React, { FC } from 'react';
 import I18n from '@sideroad/react-i18n';
-import { <%= h.inflection.underscore(name).toUpperCase() %> } from './_loc';
+import { <%= h.inflection.underscore(name).toUpperCase() %> } from '../cid';
 
 interface Props {
   onClick: () => void;
