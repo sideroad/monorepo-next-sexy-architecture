@@ -1921,10 +1921,10 @@
     accept-language "^3.0.18"
     serialize-javascript "^2.1.0"
 
-"@sideroad/redux-fetch@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@sideroad/redux-fetch/-/redux-fetch-2.0.0.tgz#af4fe71f00613fafd0d3b0856fa9a5860aaebe9f"
-  integrity sha512-KocIfJFq44WxWvEFwakug0ZFFXrivx4KYppYh78g4KBErXRLgsahEBGSDzFQXFSmY90XUta3SPmqURN+fMdU2g==
+"@sideroad/redux-fetch@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@sideroad/redux-fetch/-/redux-fetch-2.1.1.tgz#faa443c810060e984971f3e6a576b23671ddcb9b"
+  integrity sha512-iZk1L2jXNupUmt9IKLNvVZrKHaRiENiJJzSOZhH1ANi7KxzTumEk/JOVzFSZNQgsHR9g4Fg3D1B2cS+mtmm5tw==
   dependencies:
     "@types/object-hash" "^1.3.0"
     isomorphic-unfetch "^3.0.0"
@@ -2037,6 +2037,13 @@
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.3.tgz#bdfd69d61e464dcc81b25159c270d75a73c1a636"
   integrity sha512-Il2DtDVRGDcqjDtE+rF8iqg1CArehSK84HZJCT7AMITlyXRBpuPhqGLDQMowraqqu1coEaimg4ZOqggt6L6L+A==
+
+"@types/klaw-sync@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@types/klaw-sync/-/klaw-sync-6.0.0.tgz#ff0b36601efaaa109d513c4ced109311fd06ba36"
+  integrity sha512-Ibfb2jgpjYUxnl7RSVvUzOrv/vhkTVKEfPwQf9ZlDDsSyWVDp/2JtTBxO4eRrKBYtxc3cZQabdR38i8R0o1uww==
+  dependencies:
+    "@types/node" "*"
 
 "@types/minimatch@*":
   version "3.0.3"
@@ -6907,6 +6914,13 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
   integrity sha512-s5kLOcnH0XqDO+FvuaLX8DDjZ18CGFk7VygH40QoKPUQhW4e2rvM0rwUq0t8IQDOwYSeLK01U90OjzBTme2QqA==
+
+klaw-sync@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/klaw-sync/-/klaw-sync-6.0.0.tgz#1fd2cfd56ebb6250181114f0a581167099c2b28c"
+  integrity sha512-nIeuVSzdCCs6TDPTqI8w1Yre34sSq7AkZ4B3sfOBbI2CgVSB4Du4aLQijFU2+lhAFCwt9+42Hel6lQNIv6AntQ==
+  dependencies:
+    graceful-fs "^4.1.11"
 
 kleur@^3.0.3:
   version "3.0.3"

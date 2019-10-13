@@ -1,2 +1,5 @@
 /* eslint-disable no-undef */
-jest.mock('next/config', () => () => ({ serverRuntimeConfig: {} }));
+jest.mock('next/config', () => () => ({
+  serverRuntimeConfig: {},
+  publicRuntimeConfig: {}
+}));

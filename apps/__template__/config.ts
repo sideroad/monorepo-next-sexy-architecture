@@ -1,3 +1,6 @@
+import getConfig from 'next/config';
+const { publicRuntimeConfig } = getConfig();
+
 export default {
   theme: {
     color: '#EC6D71'
@@ -7,6 +10,7 @@ export default {
     description: 'this app is exists to say hello world',
     creator: 'sideroad'
   },
+  isMocked: publicRuntimeConfig.isMocked,
   global: {
     url: process.env.GLOBAL_URL
   },

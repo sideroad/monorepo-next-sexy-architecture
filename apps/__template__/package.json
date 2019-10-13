@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "npm-watch",
+    "with-mock": "MOCKED=true npm-watch",
     "next-dev": "next",
     "build": "next build",
     "start": "next start",
@@ -19,14 +20,16 @@
       "node_modules",
       "cypress"
     ],
-    "setupFiles": ["<rootDir>/jest.setup.js"]
+    "setupFiles": [
+      "<rootDir>/jest.setup.js"
+    ]
   },
   "watch": {
     "next-dev": "locales/*.json"
   },
   "dependencies": {
     "@sideroad/react-i18n": "^2.0.2",
-    "@sideroad/redux-fetch": "^2.0.0",
+    "@sideroad/redux-fetch": "^2.1.1",
     "@sideroad/with-redux-store": "^2.0.0",
     "accept-language": "^3.0.18",
     "dotenv": "^8.1.0",
@@ -35,7 +38,8 @@
     "react-dom": "^16.10.1",
     "react-redux": "^7.1.1",
     "redux": "^4.0.4",
-    "redux-devtools-extension": "^2.13.8"
+    "redux-devtools-extension": "^2.13.8",
+    "serialize-javascript": "^2.1.0"
   },
   "sideEffects": false
 }

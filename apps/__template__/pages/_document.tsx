@@ -4,6 +4,7 @@ import { init, I18nRenderJS, Headers } from '@sideroad/react-i18n';
 import locales from '../locales';
 import config from '../config';
 import { assignUrl } from '../locales';
+import { MockedDataRenderJS } from '../helpers/mock';
 
 interface Props {
   headers: Headers;
@@ -46,6 +47,7 @@ export default class MyDocument extends Document<Props> {
             locales={locales}
             assignedLanguage={lang}
           />
+          <MockedDataRenderJS />
           <Main />
           <NextScript />
           <script src="/static/sw-register.js"></script>
