@@ -1,0 +1,11 @@
+ version: 2
+ jobs:
+   build:
+     docker:
+       - image: circleci/node:10
+     steps:
+       - checkout
+       - run: yarn
+       - run: yarn create-react -n hello-world
+       - run: cd apps/hello-world
+       - run: yarn build
