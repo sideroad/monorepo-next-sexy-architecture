@@ -87,7 +87,7 @@ if (!fs.existsSync(distPath)) {
   packageJSON.scripts['deploy'] =
     'yarn clean && ./node_modules/.bin/firebase deploy';
   packageJSON.scripts['deploy-ci'] =
-    'yarn clean && ./node_modules/.bin/firebase deploy';
+    'yarn clean && ./node_modules/.bin/firebase deploy ${FIREBASE_TOKEN}';
   packageJSON.scripts['clean'] = 'rimraf "dist"';
   packageJSON.scripts['build-app'] = 'next build';
   packageJSON.scripts['build-app-permission'] =
