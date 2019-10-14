@@ -1,4 +1,4 @@
-If you want to deploy on Firebase hosting + Firebase cloud hosting.
+If you want to deploy on Firebase hosting + Firebase cloud functions.
 Please follow procedure below
 
 1. Install firebase-tools `npm i -g firebase-tools`
@@ -9,4 +9,4 @@ Please follow procedure below
 yarn apply-firebase -n ${target_application} -i ${project-id}
 ```
 4. `cd ${target_application}`
-5. `yarn deploy`
+5. `yarn deploy` 🎉🎉🎉
