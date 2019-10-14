@@ -8,4 +8,4 @@
        - run: yarn
        - run: yarn create-react -n hello-world
        - run: cd apps/hello-world
-       - run: yarn build
+       - run: yarn deploy-ci

@@ -57,7 +57,7 @@ if (!fs.existsSync(distPath)) {
   replace.sync({
     files: distPath + '/next.config.js',
     from: "distDir: '.next'",
-    to: "distDir: 'dist/functions/next'"
+    to: "distDir: 'dist/functions/.next'"
   });
 
   const dependencies = ['firebase-admin', 'firebase-functions'];
@@ -82,12 +82,16 @@ if (!fs.existsSync(distPath)) {
   const packageJSON = fs.readJSONSync(packageJSONPath);
   packageJSON.scripts['preserve'] =
     'yarn clean && yarn build-public && yarn build-functions && yarn build-app && yarn copy-deps && yarn install-deps';
-  packageJSON.scripts['serve'] = 'cross-env NODE_ENV=production firebase serve';
-  packageJSON.scripts['deploy'] = 'yarn clean && firebase deploy';
+  packageJSON.scripts['serve'] =
+    'cross-env NODE_ENV=production ./node_modules/.bin/firebase serve';
+  packageJSON.scripts['deploy'] =
+    'yarn clean && ./node_modules/.bin/firebase deploy';
+  packageJSON.scripts['deploy-ci'] =
+    'yarn clean && ./node_modules/.bin/firebase deploy';
   packageJSON.scripts['clean'] = 'rimraf "dist"';
   packageJSON.scripts['build-app'] = 'next build';
   packageJSON.scripts['build-app-permission'] =
-    'chmod 755 dist/functions/next/static/media/*.svg';
+    'chmod 755 dist/functions/.next/static/media/*.svg';
   packageJSON.scripts['build-public'] = 'cpx "public/**/*.*" "dist/public" -C';
   packageJSON.scripts['build-functions'] = 'tsc --project functions';
   packageJSON.scripts['lint-app'] = 'tslint --project ./';
