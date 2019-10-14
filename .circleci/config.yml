@@ -5,9 +5,12 @@
        - image: circleci/node:10
      steps:
        - checkout
+
        - run: |
           yarn
           yarn create-app -n hello-world
           yarn apply-firebase -n hello-world -i hello-world-33549
+
+       - run: |
           cd apps/hello-world
           yarn deploy-ci
