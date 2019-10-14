@@ -1,7 +1,5 @@
 import React, { FC } from 'react';
 import serialize from 'serialize-javascript';
-import path from 'path';
-import klawSync from 'klaw-sync';
 
 const isServer = typeof window === 'undefined';
 const mocks = {};
@@ -12,6 +10,11 @@ const loadMockData = () => {
   }
   if (!isLoaded) {
     isLoaded = true;
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const klawSync = require('klaw-sync');
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const path = require('path');
+
     const items = klawSync(path.join(process.cwd(), 'mocks'), {
       filter: item => item.stats.isFile()
     });

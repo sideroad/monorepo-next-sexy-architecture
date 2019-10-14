@@ -22,4 +22,8 @@ lerna-error.log*
 
 apps/**/cypress/screenshots/
 apps/**/cypress/videos/
+
+# for firebase app
+.firebase
+
 !.gitkeep

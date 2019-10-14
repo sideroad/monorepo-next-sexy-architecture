@@ -8,6 +8,7 @@
   },
   "scripts": {
     "create-app": "node bin/create-app.js",
+    "apply-firebase": "node bin/apply-firebase.js",
     "lint": "eslint apps/**/*.{js,ts,tsx}",
     "test": "lerna exec -- yarn test",
     "lint-staged": "lint-staged",

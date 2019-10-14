@@ -41,5 +41,8 @@
     "redux-devtools-extension": "^2.13.8",
     "serialize-javascript": "^2.1.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "engines": {
+    "node": "10"
+  }
 }
