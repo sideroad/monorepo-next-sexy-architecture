@@ -93,3 +93,6 @@ export default {
   ...
 };
 ```
+
+# For firebase deployment
+Check https://github.com/sideroad/monorepo-next-sexy-architecture/blob/master/FOR_FIREBASE_CLOUD_FUNCTIONS.md for more detail
