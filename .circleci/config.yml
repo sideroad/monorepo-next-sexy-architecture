@@ -6,6 +6,7 @@
      steps:
        - checkout
        - run: yarn
-       - run: yarn create-react -n hello-world
+       - run: yarn create-app -n hello-world
+       - run: yarn apply-firebase -n hello-world -i hello-world-33549
        - run: cd apps/hello-world
        - run: yarn deploy-ci
