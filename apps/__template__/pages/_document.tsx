@@ -50,7 +50,7 @@ export default class MyDocument extends Document<Props> {
           <MockedDataRenderJS />
           <Main />
           <NextScript />
-          <script src="/static/sw-register.js"></script>
+          <script src="/sw-register.js"></script>
         </body>
       </html>
     );

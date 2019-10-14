@@ -1,18 +1,10 @@
-/**
- * There are two alternative to activate sw.js
- * 1. return this script from /sw.js instead of /static/sw.js
- *    sw-register.js need to change path of sw.js as well
- * 2. return this script of response header with below
- *    Service-Worker-Allowed: /
- */
-
 self.addEventListener('install', event => {
   event.waitUntil(
     caches
       .open('static')
       .then(cache =>
         cache.addAll([
-          '/en/_offline',
+          '/en-us/_offline',
           '/static/images/favicon.png',
           '/static/pulltorefresh.min.js',
           '/static/pulltorefresh-init.js'
