@@ -9,5 +9,8 @@
   ],
   "window.zoomLevel": 1,
   "editor.tabSize": 2,
-  "workbench.tree.indent": 18
+  "workbench.tree.indent": 18,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }

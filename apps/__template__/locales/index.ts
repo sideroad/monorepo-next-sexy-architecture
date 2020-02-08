@@ -38,13 +38,19 @@ export const assignUrl = ({ req, res, query }) => {
   if (!req || supportedLanguage.find(lang => lang === query.lang)) {
     return;
   } else {
+    const matched = supportedLanguage.find(lang =>
+      new RegExp(`^/${lang}`).test(req.url)
+    );
+    if (matched) {
+      return;
+    }
     acceptLanguage.languages(assignableLanguage);
     const assignedLanguage = fallback(
       acceptLanguage.get(req.headers['accept-language'])
     );
     res.setHeader(
       'Location',
-      `/${assignedLanguage}${req.url === '/' ? '' : req.url}`
+      `/${assignedLanguage}${req.url.match(/^\/(\?.+)?$/) ? '' : req.url}`
     );
     res.statusCode = 302;
     res.end();
