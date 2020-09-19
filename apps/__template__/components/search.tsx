@@ -1,18 +1,17 @@
 import React, { FC, useState, useContext } from 'react';
-import I18n, { Context } from '@sideroad/react-i18n';
-import Button from './button';
-import { SEARCH } from '../cid';
+import I18n from '@sideroad/react-i18n';
+import { Context } from 'helpers/context';
+import Button from 'shared/components/Button';
 
 interface Props {
   onSubmit: (id: string) => void;
 }
 const Search: FC<Props> = (props: Props) => {
   const [text, setText] = useState('octocat');
-  const i18n = useContext(Context);
+  const { t } = useContext(Context);
 
   return (
     <form
-      data-cid={SEARCH}
       onSubmit={e => {
         e.preventDefault();
         props.onSubmit(text);
@@ -30,7 +29,7 @@ const Search: FC<Props> = (props: Props) => {
           {
             // second one to provide functionality
           }
-          {i18n.t('search-description')}
+          {t('search-description')}
         </h2>
       </div>
       <p>

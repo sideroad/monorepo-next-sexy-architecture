@@ -14,5 +14,9 @@ module.exports = withTM({
 
     config.resolve.extensions.push('.ts', '.tsx');
     return config;
+  },
+  serverRuntimeConfig: {
+    // Will only be available on the server side
+    secretKey: process.env.SOMETHING_ABOUT_SECRET_KEY // Pass through env variables
   }
 });

@@ -3,7 +3,8 @@
   "private": true,
   "workspaces": {
     "packages": [
-      "apps/*"
+      "apps/*",
+      "shared"
     ]
   },
   "scripts": {
@@ -12,7 +13,8 @@
     "lint": "eslint apps/**/*.{js,ts,tsx}",
     "test": "lerna exec -- yarn test",
     "lint-staged": "lint-staged",
-    "postinstall": "vscode-extension-install"
+    "postinstall": "vscode-extension-install",
+    "clean": "rm -Rf node_modules && rm -Rf apps/*/node_modules && rm -Rf shared/node_modules && yarn"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [

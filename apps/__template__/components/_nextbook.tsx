@@ -1,8 +1,7 @@
 /* eslint-disable react/display-name */
 import React from 'react';
-import Search from './search';
-import User from './user';
-import Link from './link';
+import Search from './Search';
+import User from './User';
 import { NextBook } from 'pages/[lang]/_nextbook';
 
 const nextBook: NextBook = {
@@ -24,28 +23,6 @@ const nextBook: NextBook = {
           html_url="https://github.com/sideroad"
         />
       )
-    },
-    {
-      name: 'Link',
-      desc: 'Show link with language assignment',
-      components: [
-        {
-          name: 'Basic usage',
-          component: (
-            <Link key="top" href="/">
-              <a>Home</a>
-            </Link>
-          )
-        },
-        {
-          name: 'With as property',
-          component: (
-            <Link key="user" href="/users/[id]" as="/users/sideroad">
-              <a>sideroad</a>
-            </Link>
-          )
-        }
-      ]
     }
   ]
 };

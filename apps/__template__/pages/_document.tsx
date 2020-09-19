@@ -1,10 +1,9 @@
 import React from 'react';
-import Document, { Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { init, I18nRenderJS, Headers } from '@sideroad/react-i18n';
 import locales from '../locales';
 import config from '../config';
 import { assignUrl } from '../locales';
-import { MockedDataRenderJS } from '../helpers/mock';
 
 interface Props {
   headers: Headers;
@@ -27,12 +26,8 @@ export default class MyDocument extends Document<Props> {
     const i18n = init({ headers, locales, assignedLanguage: lang });
 
     return (
-      <html lang={i18n.lang}>
+      <Html lang={i18n.lang}>
         <Head>
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
-          />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta charSet="utf-8" />
           <meta name="theme-color" content={config.theme.color} />
@@ -47,12 +42,11 @@ export default class MyDocument extends Document<Props> {
             locales={locales}
             assignedLanguage={lang}
           />
-          <MockedDataRenderJS />
           <Main />
           <NextScript />
           <script src="/sw-register.js"></script>
         </body>
-      </html>
+      </Html>
     );
   }
 }

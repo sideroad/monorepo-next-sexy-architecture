@@ -1,9 +1,8 @@
-import React, { ReactElement, useContext } from 'react';
+import React, { ReactElement } from 'react';
 import hash from 'object-hash';
-import Link from 'shared/components/Link';
+import Link from 'components/Link';
 import { NextPage } from 'next';
 import nextBook from 'components/_nextbook';
-import { Context } from 'helpers/context';
 
 export interface NextBook {
   title: string;
@@ -29,7 +28,6 @@ interface Props {
   };
 }
 const NextBook: NextPage<Props> = (props: Props) => {
-  const { lang } = useContext(Context);
   const currentBook =
     books.find(book => book.id === props.query.id) || books[0];
   const components = currentBook
@@ -44,7 +42,7 @@ const NextBook: NextPage<Props> = (props: Props) => {
           <ul className="list">
             {books.map(book => (
               <li className="item" key={book.id}>
-                <Link path={`/[lang]/_nextbook`} query={{ lang, id: book.id }}>
+                <Link path={`/_nextbook`} query={{ id: book.id }}>
                   <a className="link">{book.name}</a>
                 </Link>
               </li>
@@ -71,10 +69,10 @@ const NextBook: NextPage<Props> = (props: Props) => {
                   <div className="subdivider" />
                   <h3 className="props">Sample props</h3>
                   <ul>
-                    {Object.keys(component.props).map(prop => {
+                    {Object.keys(component.props).map((prop, index) => {
                       const value = component.props[prop];
                       return (
-                        <li className="prop" key={prop}>
+                        <li className="prop" key={index}>
                           <strong>{prop}</strong>:{' '}
                           {value.toString ? value.toString() : value}
                         </li>

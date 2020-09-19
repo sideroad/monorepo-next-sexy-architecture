@@ -11,7 +11,6 @@ import urls from '../urls';
 import locales, { fallbackLanguage } from '../locales';
 import { Store } from 'types/redux';
 import config from '../config';
-import mock from '../helpers/mock';
 
 interface Props {
   headers: Headers;
@@ -31,8 +30,7 @@ class MyApp extends App<Props> {
     const fetcher = new Fetcher({
       headers,
       dispatch: ctx.store.dispatch,
-      urls,
-      mocks: config.isMocked ? mock() : undefined
+      urls
     });
 
     if (Component.getInitialProps) {
@@ -58,19 +56,23 @@ class MyApp extends App<Props> {
     const fetcher = new Fetcher({
       dispatch: store.dispatch,
       urls,
-      headers,
-      mocks: config.isMocked ? mock() : undefined
+      headers
     });
     return (
       <I18nProvider value={i18n}>
         <ContextProvider
           value={{
-            fetcher
+            fetcher,
+            ...i18n
           }}
         >
           <ReduxProvider store={store}>
             <Head>
               <title>{config.meta.title}</title>
+              <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+              />
             </Head>
             <Component {...pageProps} />
             <style jsx global>

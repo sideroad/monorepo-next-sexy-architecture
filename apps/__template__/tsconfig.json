@@ -19,7 +19,9 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-       "components/*": ["./components/*"],
+       "config": [
+        "./config"
+       ],
        "reducers/*": ["./reducers/*"],
        "types/*": ["./../../types/*"]
     }
@@ -28,7 +30,6 @@
     "node_modules"
   ],
   "include": [
-    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
   ]

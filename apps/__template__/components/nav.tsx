@@ -1,27 +1,30 @@
 import React, { FC } from 'react';
-import Link from 'components/link';
-import { NAV } from '../cid';
+import Link from 'shared/components/Link';
 
-const links = [{ href: '/users/octocat', label: 'Octocat' }];
+const links = [
+  { path: '/users/[id]', query: { id: 'octcat' }, label: 'Octocat' }
+];
 
 const Nav: FC = () => (
-  <nav data-cid={NAV}>
-    <ul>
-      <li>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-      </li>
+  <>
+    <nav>
       <ul>
-        {links.map(({ href, label }) => (
-          <li key={`nav-link-${href}-${label}`}>
-            <Link href="/users/[id]" as={href}>
-              <a>{label}</a>
-            </Link>
-          </li>
-        ))}
+        <li>
+          <Link path="/">
+            <a>Home</a>
+          </Link>
+        </li>
+        <ul>
+          {links.map(({ path, query, label }) => (
+            <li key={`nav-link-${path}-${label}`}>
+              <Link path={path} query={query}>
+                <a>{label}</a>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </ul>
-    </ul>
+    </nav>
 
     <style jsx>{`
       nav {
@@ -44,7 +47,7 @@ const Nav: FC = () => (
         font-size: 13px;
       }
     `}</style>
-  </nav>
+  </>
 );
 
 export default Nav;

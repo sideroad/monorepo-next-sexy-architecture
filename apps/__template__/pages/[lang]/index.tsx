@@ -1,12 +1,11 @@
-import React, { useContext } from 'react';
-import Head from 'components/head';
-import Nav from 'components/nav';
-import Search from 'components/search';
+import React, { useContext, FC } from 'react';
+import Head from 'components/Head';
+import Nav from 'components/Nav';
+import Search from 'components/Search';
 import Router from 'next/router';
-import { NP } from 'types/next';
-import { Context } from '@sideroad/react-i18n';
+import { Context } from 'helpers/context';
 
-const Index: NP = () => {
+const Index: FC = () => {
   const { lang } = useContext(Context);
   return (
     <div>

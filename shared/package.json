@@ -1,18 +1,14 @@
 {
-  "name": "template",
+  "name": "shared",
   "version": "1.0.0",
   "scripts": {
     "dev": "npm-watch",
-    "next-dev": "next",
+    "next-dev": "next dev -p 8000",
     "build": "next build",
     "start": "next start",
     "gen-component": "hygen component new",
-    "gen-reducer": "hygen reducer new",
-    "gen-pure-reducer": "hygen pure-reducer new",
-    "gen-page": "hygen page new",
     "test": "jest --passWithNoTests",
-    "cypress:open": "cypress open",
-    "ci": "cypress run"
+    "ci": "echo 1"
   },
   "jest": {
     "testPathIgnorePatterns": [

@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { NP } from 'types/next';
-import User from 'components/user';
-import Head from 'components/head';
-import Nav from 'components/nav';
+import User from 'components/User';
+import Head from 'components/Head';
+import Nav from 'components/Nav';
 
 interface Props {
   user: {

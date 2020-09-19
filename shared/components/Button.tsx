@@ -1,16 +1,13 @@
 import React, { FC, ReactNode } from 'react';
-import { BUTTON } from '../cid';
 
 interface Props {
-  onClick: () => void;
+  onClick?: () => void;
   children: ReactNode;
 }
 const Button: FC<Props> = (props: Props) => {
   return (
     <>
-      <button data-cid={BUTTON} onClick={() => props.onClick()}>
-        {props.children}
-      </button>
+      <button onClick={() => props.onClick()}>{props.children}</button>
       <style jsx>
         {`
           button {

@@ -1,17 +1,16 @@
 ---
-to: components/<%= name %>.tsx
+to: components/<%= h.inflection.camelize(name) %>.tsx
 ---
 import React, { FC } from 'react';
 import I18n from '@sideroad/react-i18n';
-import { <%= h.inflection.underscore(name).toUpperCase() %> } from '../cid';
 
 interface Props {
-  onClick: () => void;
+  onClick?: () => void;
 }
 const <%= h.inflection.camelize(name) %>: FC<Props> = (props: Props) => {
   return (
     <>
-      <button data-cid={<%= h.inflection.underscore(name).toUpperCase() %>} onClick={() => props.onClick()}>
+      <button onClick={props.onClick}>
         <I18n id="hello" />
       </button>
       <style jsx>

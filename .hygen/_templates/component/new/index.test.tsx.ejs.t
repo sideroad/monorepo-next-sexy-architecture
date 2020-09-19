@@ -1,8 +1,8 @@
 ---
-to: components/__tests__/<%= name %>.test.tsx
+to: components/__tests__/<%= h.inflection.camelize(name) %>.test.tsx
 ---
 import React from 'react';
-import <%= h.inflection.camelize(name) %> from '../<%= name %>';
+import <%= h.inflection.camelize(name) %> from '../<%= h.inflection.camelize(name) %>';
 import renderer from 'react-test-renderer';
 
 test('<%= h.inflection.camelize(name) %> to render', () => {
