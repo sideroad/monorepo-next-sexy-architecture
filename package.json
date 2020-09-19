@@ -14,7 +14,8 @@
     "test": "lerna exec -- yarn test",
     "lint-staged": "lint-staged",
     "postinstall": "vscode-extension-install",
-    "clean": "rm -Rf node_modules && rm -Rf apps/*/node_modules && rm -Rf shared/node_modules && yarn"
+    "clean": "rm -Rf node_modules && rm -Rf apps/*/node_modules && rm -Rf shared/node_modules && yarn",
+    "hard-clean": "rm yarn.lock && yarn clean"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
