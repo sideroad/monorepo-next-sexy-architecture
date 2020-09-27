@@ -22,7 +22,7 @@
        "config": [
         "./config"
        ],
-       "reducers/*": ["./reducers/*"],
+       "fetchers/*": ["fetchers/*"],
        "types/*": ["./../../types/*"]
     }
   },

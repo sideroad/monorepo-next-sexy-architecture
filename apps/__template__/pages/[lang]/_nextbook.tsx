@@ -3,7 +3,7 @@ import hash from 'object-hash';
 import Link from 'shared/components/Link';
 import { NextPage } from 'next';
 import nextBook from 'components/_nextbook';
-import { Context } from 'helpers/context';
+import { Context } from 'shared/helpers/context';
 
 export interface NextBook {
   title: string;

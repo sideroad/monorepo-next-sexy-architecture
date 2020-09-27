@@ -1,6 +1,6 @@
 import React, { FC, useState, useContext } from 'react';
 import I18n from '@sideroad/react-i18n';
-import { Context } from 'helpers/context';
+import { Context } from 'shared/helpers/context';
 import Button from 'shared/components/Button';
 
 interface Props {
