@@ -1,35 +1,35 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { NP } from 'types/next';
+import React, { FC } from 'react';
 import User from 'components/User';
 import Head from 'components/Head';
 import Nav from 'components/Nav';
+import { fetchUser, UserGetRS, useUser } from 'fetchers/user';
+import { useRouter } from 'next/router';
 
 interface Props {
-  user: {
-    login: string;
-    avatar_url: string;
-    html_url: string;
-  };
+  user?: UserGetRS;
 }
 
-const UserPage: NP<Props> = (props: Props) => {
+export async function getStaticPaths() {
+  return { paths: [], fallback: true };
+}
+
+export async function getStaticProps({ params }) {
+  try {
+    const user = await fetchUser({ id: params.id });
+    return { props: { user } };
+  } catch (error) {
+    return { props: {} };
+  }
+}
+
+export default function UserPage(props: Props) {
+  const router = useRouter();
+  const { data, error } = useUser({ id: String(router.query.id) }, props.user);
   return (
     <>
       <Head />
       <Nav />
-      <User {...props.user} />
+      {data ? <User {...data} /> : null}
     </>
   );
-};
-
-UserPage.getInitialProps = async ({ fetcher, query }) => {
-  await fetcher.user.get({
-    id: query.id
-  });
-  return {};
-};
-
-export default connect(state => ({
-  user: state.user.item
-}))(UserPage);
+}

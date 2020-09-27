@@ -28,18 +28,14 @@
   },
   "dependencies": {
     "@sideroad/react-i18n": "^2.2.3",
-    "@sideroad/redux-fetch": "^2.2.3",
-    "@sideroad/with-redux-store": "^2.2.3",
     "accept-language": "^3.0.18",
     "dotenv": "^8.1.0",
     "next": "^9.5.3",
     "next-transpile-modules": "^4.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-redux": "^7.2.1",
-    "redux": "^4.0.5",
-    "redux-devtools-extension": "^2.13.8",
-    "serialize-javascript": "^3.1.0"
+    "serialize-javascript": "^3.1.0",
+    "swr": "^0.3.5"
   },
   "sideEffects": false,
   "engines": {

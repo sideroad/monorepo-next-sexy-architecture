@@ -3,7 +3,7 @@ import Head from 'components/Head';
 import Nav from 'components/Nav';
 import Search from 'components/Search';
 import Router from 'next/router';
-import { Context } from 'helpers/context';
+import { Context } from 'shared/helpers/context';
 
 const Index: FC = () => {
   const { lang } = useContext(Context);
