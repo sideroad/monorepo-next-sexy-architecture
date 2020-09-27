@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import Link from 'shared/components/Link';
 
 const links = [
-  { path: '/users/[id]', query: { id: 'octcat' }, label: 'Octocat' }
+  { path: '/users/[id]', query: { id: 'octocat' }, label: 'Octocat' }
 ];
 
 const Nav: FC = () => (

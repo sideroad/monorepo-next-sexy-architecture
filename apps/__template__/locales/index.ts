@@ -35,7 +35,11 @@ supportedLanguage.forEach(lang => {
 });
 
 export const assignUrl = ({ req, res, query }) => {
-  if (!req || supportedLanguage.find(lang => lang === query.lang)) {
+  if (
+    !req ||
+    supportedLanguage.find(lang => lang === query.lang) ||
+    /^\/(_next|\[lang\]|404)\/?/.test(req.url)
+  ) {
     return;
   } else {
     const matched = supportedLanguage.find(lang =>

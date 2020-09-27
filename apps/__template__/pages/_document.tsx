@@ -11,7 +11,7 @@ interface Props {
 }
 
 export default class MyDocument extends Document<Props> {
-  static async getInitialProps(ctx) {
+  static async getInitialProps(ctx: any) {
     const initialProps = await Document.getInitialProps(ctx);
     assignUrl({
       req: ctx.req,
