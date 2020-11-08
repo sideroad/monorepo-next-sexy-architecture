@@ -1,23 +1,21 @@
 import React, { FC } from 'react';
-import Link from 'shared/components/Link';
+import Link from 'next/link';
 
-const links = [
-  { path: '/users/[id]', query: { id: 'octocat' }, label: 'Octocat' }
-];
+const links = [{ pathname: `/users/octocat`, label: 'Octocat' }];
 
 const Nav: FC = () => (
   <>
     <nav>
       <ul>
         <li>
-          <Link path="/">
+          <Link href="/">
             <a>Home</a>
           </Link>
         </li>
         <ul>
-          {links.map(({ path, query, label }) => (
-            <li key={`nav-link-${path}-${label}`}>
-              <Link path={path} query={query}>
+          {links.map(({ pathname, label }) => (
+            <li key={`nav-link-${pathname}-${label}`}>
+              <Link href={pathname}>
                 <a>{label}</a>
               </Link>
             </li>

@@ -1,14 +1,15 @@
 import React from 'react';
 import Head from 'next/head';
 import App from 'next/app';
-import { init, Provider as I18nProvider, Headers } from '@sideroad/react-i18n';
+import { init, Provider as I18nProvider } from '@sideroad/react-i18n';
 import { Provider as ContextProvider } from 'shared/helpers/context';
-import locales, { fallbackLanguage } from '../locales';
+import locales from '../locales';
 import config from '../config';
 
 interface Props {
-  headers: Headers;
-  lang: string | undefined;
+  headers: {
+    [x in string]: string;
+  };
 }
 
 class MyApp extends App<Props> {
@@ -26,19 +27,16 @@ class MyApp extends App<Props> {
     }
     return {
       pageProps,
-      headers,
-      lang: ctx.query.lang
+      headers
     };
   }
 
   render() {
-    const { Component, pageProps, headers, lang } = this.props;
+    const { Component, pageProps, router } = this.props;
 
     const i18n = init({
-      headers,
-      locales,
-      fallbackLanguage,
-      assignedLanguage: lang
+      lang: router.locale,
+      locales
     });
 
     return (

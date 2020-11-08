@@ -1,50 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Button to render document.head 1`] = `
-Array [
-  <div>
-    Button
-    <button
-      className="jsx-3752195309"
-      onClick={[Function]}
-    >
-      FooBar
-    </button>
-  </div>,
-  <div>
-    Link
-    <div>
-      <div>
-        Link
-         - 
-        Basic usage
-      </div>
-      <div>
-        <a
-          href="/"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-        >
-          Home
-        </a>
-      </div>
-    </div>
-    <div>
-      <div>
-        Link
-         - 
-        With as property
-      </div>
-      <div>
-        <a
-          href="/users/sideroad"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-        >
-          sideroad
-        </a>
-      </div>
-    </div>
-  </div>,
-]
+<div>
+  Button
+  <button
+    className="jsx-3752195309"
+    onClick={[Function]}
+  >
+    FooBar
+  </button>
+</div>
 `;

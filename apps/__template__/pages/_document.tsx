@@ -1,32 +1,21 @@
 import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import { init, I18nRenderJS, Headers } from '@sideroad/react-i18n';
+import { init, I18nRenderJS } from '@sideroad/react-i18n';
 import locales from '../locales';
 import config from '../config';
-import { assignUrl } from '../locales';
 
-interface Props {
-  headers: Headers;
-  lang: string | undefined;
-}
-
-export default class MyDocument extends Document<Props> {
+export default class MyDocument extends Document {
   static async getInitialProps(ctx: any) {
     const initialProps = await Document.getInitialProps(ctx);
-    assignUrl({
-      req: ctx.req,
-      res: ctx.res,
-      query: ctx.query
-    });
-    return { ...initialProps, headers: ctx.req.headers, lang: ctx.query.lang };
+    return { ...initialProps, headers: ctx.req.headers };
   }
 
   render() {
-    const { headers, lang } = this.props;
-    const i18n = init({ headers, locales, assignedLanguage: lang });
+    const { locale } = this.props;
+    const i18n = init({ locales, lang: locale });
 
     return (
-      <Html lang={i18n.lang}>
+      <Html>
         <Head>
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta charSet="utf-8" />
@@ -37,11 +26,7 @@ export default class MyDocument extends Document<Props> {
           <link rel="apple-touch-icon" href={`/static/images/favicon.png`} />
         </Head>
         <body>
-          <I18nRenderJS
-            headers={headers}
-            locales={locales}
-            assignedLanguage={lang}
-          />
+          <I18nRenderJS locales={locales} lang={locale} />
           <Main />
           <NextScript />
           <script src="/sw-register.js"></script>

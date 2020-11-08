@@ -3,12 +3,7 @@ import Head from 'next/head';
 import App from 'next/app';
 import config from '../config';
 
-interface Props {
-  headers: Headers;
-  lang: string | undefined;
-}
-
-class MyApp extends App<Props> {
+class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
 

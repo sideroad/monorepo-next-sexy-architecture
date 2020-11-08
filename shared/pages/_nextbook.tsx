@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import hash from 'object-hash';
-import Link from 'components/Link';
+import Link from 'next/link';
 import { NextPage } from 'next';
 import nextBook from 'components/_nextbook';
 
@@ -42,7 +42,7 @@ const NextBook: NextPage<Props> = (props: Props) => {
           <ul className="list">
             {books.map(book => (
               <li className="item" key={book.id}>
-                <Link path={`/_nextbook`} query={{ id: book.id }}>
+                <Link href={{ pathname: `/_nextbook`, query: { id: book.id } }}>
                   <a className="link">{book.name}</a>
                 </Link>
               </li>

@@ -5,6 +5,10 @@ const withTM = require('next-transpile-modules')(['shared', 'types']);
 require('dotenv').config();
 
 module.exports = withTM({
+  i18n: {
+    locales: ['en-us', 'ja-jp'],
+    defaultLocale: 'en-us'
+  },
   distDir: '.next',
   webpack: config => {
     // Fixes npm packages that depend on `fs` module
