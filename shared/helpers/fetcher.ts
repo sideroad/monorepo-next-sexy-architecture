@@ -9,7 +9,7 @@ const normalize = (_uri: string, params: { [x: string]: string }): string => {
     if (uri.match(`\\[${key}\\]`)) {
       uri = uri.replace(new RegExp(`\\[${key}\\]`, 'g'), val);
     } else {
-      values[key] = val;
+      values[key] = params[key];
     }
   });
   const query = qs.stringify(values);
